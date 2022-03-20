@@ -46,7 +46,10 @@ class LoginViewController: UIViewController {
         }
     }
     @IBAction func appleLoginButtonTapped(_ sender: UIButton) {
-        //FireBase인증
+        let alert = UIAlertController(title: "로그인 시도!", message: "애플 로그인!!!", preferredStyle: UIAlertController.Style.alert)
+        let okAction = UIAlertAction(title: "확인", style: .default) { (action) in }
+        alert.addAction(okAction)
+        self.present(alert, animated: false, completion: nil)
     }
     
     private func showMainViewController() {
